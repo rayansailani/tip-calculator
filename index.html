@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="heading-top">
+    <h2>S P L I</h2>
+    <h2>T T E R</h2>
+  </div>
+  <div class="card">
+    <div class="left-container">
+
+      <label for="bill">Bill</label>
+      <input id="bill" type="text">
+
+      <label>Select Tip %</label>
+      <div class="tip-selector">
+        <!-- <div class="button-group"> -->
+        <div class="">
+          <button>5%</button>
+        </div>
+        <div class="">
+          <button>10%</button>
+        </div>
+        <div class="">
+          <button>15%</button>
+        </div>
+        <div class="">
+          <button>25%</button>
+        </div>
+        <div class="">
+          <button>50%</button>
+        </div>
+        <div class="">
+          <input type="text" placeholder="Custom">
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="input">
+        <label for="no">Number of people</label>
+        <span id="validator"></span>
+      </div>
+      <input id="no" type="text">
+
+
+    </div>
+    <div class="right-container">
+      <div class="">
+        <div class="result-display">
+          <div class="text">
+            <p class="title">Tip Amount</p>
+            <p class="sut-title">/ person</p>
+          </div>
+          <p class="amount">
+            $0.00
+          </p>
+        </div>
+        <div class="result-display">
+          <div class="text">
+            <p class="title">Total</p>
+            <p class="sut-title">/ person</p>
+          </div>
+          <p class="amount">
+            $0.00
+          </p>
+        </div>
+      </div>
+      <button class="reset-button">
+        RESET
+      </button>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
