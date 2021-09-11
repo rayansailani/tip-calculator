@@ -1,6 +1,6 @@
 console.log(123);
-let tipAmount = 0;
-let totalAmount = 0;
+let tipAmount = 0.0;
+let totalAmount = 0.0;
 let noPeople = 0;
 let percentage = 0;
 let billAmount = 0;
@@ -8,10 +8,10 @@ var button = null;
 let amountElement = document.getElementById("total-amount");
 let tipElement = document.getElementById("tip-amount");
 const setTotalAmount = () => {
-  tipAmount = ((billAmount * (percentage / 100)) / noPeople).toPrecision(2);
-  totalAmount = (billAmount / noPeople + parseInt(tipAmount)).toPrecision(2);
-  amountElement.innerHTML = totalAmount;
-  tipElement.innerHTML = tipAmount;
+  tipAmount = ((billAmount * (percentage / 100)) / noPeople).toFixed(2);
+  totalAmount = (billAmount / noPeople + parseInt(tipAmount)).toFixed(2);
+  amountElement.innerHTML = totalAmount.toString().toLocaleString();
+  tipElement.innerHTML = tipAmount.toString().toLocaleString();
 };
 
 const setPercentage = (perc) => {
@@ -52,7 +52,9 @@ const setNoPeople = (people = 0) => {
 
 const setBillAmount = (value = 0) => {
   billAmount = parseInt(value);
-  console.log(billAmount);
+  if (percentage && noPeople) {
+    setTotalAmount();
+  }
 };
 
 const resetButton = () => {
