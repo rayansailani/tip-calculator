@@ -25,7 +25,7 @@
     <div class="left-container">
 
       <label for="bill">Bill</label>
-      <input oninput="setBillAmount(this.value)" id="bill" type="text">
+      <input oninput="setBillAmount(this.value)" id="bill" type="number">
 
       <label>Select Tip %</label>
       <div class="tip-selector">
@@ -46,7 +46,7 @@
           <button onclick="setPercentage(50)" id="50">50%</button>
         </div>
         <div class="">
-          <input oninput="setCustomPercentageInput(this.value)" id="custom" type="text" placeholder="Custom">
+          <input oninput="setCustomPercentageInput(this.value)" id="custom" type="number" placeholder="Custom">
         </div>
 
       </div>
@@ -54,7 +54,7 @@
         <label for="no">Number of people</label>
         <span id="validator"></span>
       </div>
-      <input oninput="setNoPeople(this.value)" id="no" type="text">
+      <input oninput="setNoPeople(this.value)" id="no" type="number">
 
 
     </div>
