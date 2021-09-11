@@ -26,7 +26,9 @@ const setPercentage = (perc) => {
   button.style.color = "hsl(183, 100%, 15%)";
   //   changes in the percentage levels
   percentage = parseInt(perc);
-  setTotalAmount;
+  if (billAmount && noPeople) {
+    setTotalAmount();
+  }
 };
 
 const setCustomPercentageInput = (perc) => {
@@ -35,7 +37,9 @@ const setCustomPercentageInput = (perc) => {
     button.style.color = "white";
   } catch {}
   percentage = parseInt(perc);
-  setTotalAmount();
+  if (billAmount && noPeople) {
+    setTotalAmount();
+  }
 };
 
 const setNoPeople = (people = 0) => {
@@ -46,7 +50,9 @@ const setNoPeople = (people = 0) => {
   } else {
     validator.innerHTML = "";
     noPeople = parseInt(people);
-    setTotalAmount();
+    if (billAmount && percentage) {
+      setTotalAmount();
+    }
   }
 };
 

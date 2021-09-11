@@ -54,7 +54,8 @@
         <label for="no">Number of people</label>
         <span id="validator"></span>
       </div>
-      <input oninput="setNoPeople(this.value)" id="no" type="number">
+      <input oninput="setNoPeople(this.value)" id="no" type="number"
+        onkeydown="if(event.key==='.'){event.preventDefault();}">
 
 
     </div>
