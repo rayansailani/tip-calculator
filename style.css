@@ -47,6 +47,7 @@ body {
 }
 
 .left-container label {
+  font-size: 0.8rem;
   display: flex;
   justify-content: space-between;
   margin: 0.4rem;
@@ -83,6 +84,7 @@ body {
 .tip-selector > div > button {
   padding: 0.4rem 0.7rem;
   font-family: "Space Mono", monospace;
+  font-weight: bolder;
   background: hsl(183, 100%, 15%);
   color: white;
   border: none;
@@ -106,6 +108,18 @@ body {
 }
 #no {
   background-image: url("images/icon-person.svg");
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 87%;
+}
+#validator {
+  font-size: 0.8rem;
+  margin: 0.4rem;
+  color: red;
 }
 
 .right-container {
@@ -161,7 +175,7 @@ body {
     flex: 50%;
   }
   .card {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
